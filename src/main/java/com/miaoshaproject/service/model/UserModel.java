@@ -4,8 +4,12 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-public class UserModel {
+//redis默认序列化的方式使用jdk序列化的方式，因此要存入redis需要实现Serializable接口
+//方法二：这里也可以不实现该接口，而设置redis使用json序列化方式，在跨系统应用中是最好的
+public class UserModel implements Serializable {
+
     private Integer id;
     //不能为空字符串和null
     @NotBlank(message ="用户名不能为空")

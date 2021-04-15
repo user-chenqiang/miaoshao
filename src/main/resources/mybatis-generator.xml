@@ -45,11 +45,9 @@
 <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
 <!--             <table tableName="promo" domainObjectName="PromoDO" enableCountByExample="false" enableUpdateByExample="false"-->
 <!--                 enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
-    <bean id="moocAspect" class="com.imooc.aop.schema.advice.MoocAspect"></bean>
-    <bean id="aspectBiz" class="com.imooc.aop.schema.advice.AspectBiz"></bean>
-    <aop:config>
-        <aop:aspect id="moocAspectAOP" ref="moocAspect">
-        </aop:aspect>
-    </aop:config>
+                 <table tableName="stock_log" domainObjectName="StockLogDO" enableCountByExample="false"
+                        enableUpdateByExample="false" enableDeleteByExample="false"
+                        enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
+</context>
 </generatorConfiguration>
